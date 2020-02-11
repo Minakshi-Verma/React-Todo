@@ -32,6 +32,7 @@ class TodoForm extends Component {
 <form className = "form" onSubmit = {this.handleSubmit}>
     <input className ="input"
     type ="text"
+    placeholder = "add task..."
     name = "newTask"
     value = {this.state.newItem}
     onChange = {this.handleChanges}

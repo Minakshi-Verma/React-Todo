@@ -7,7 +7,7 @@ const myTasks = [
   {
   task: 'Go for shopping',
   id: 1,
-  completed: true 
+  completed: false 
 },
 {
   task: 'Get the groceries',
