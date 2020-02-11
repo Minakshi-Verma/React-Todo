@@ -6,7 +6,7 @@ class TodoForm extends Component {
     constructor(){
      super()
     this.state ={
-        newTask: ''
+        newItem: ''
     }   
     }
 
@@ -14,29 +14,30 @@ class TodoForm extends Component {
  handleChanges = e => {
      //update state with each keystroke
      this.setState({
-         newTask: e.target.value
+         newItem: e.target.value
      });
  };
 
     //handleSubmit function(class property to submit form)
     handleSubmit = e => {
         e.preventDefault();
-        this.props.addNewTasK(this.state.newTask)
+        this.props.addNewItem(this.state.newItem)
+        this.setState({newItem:''})
     }
 
 
     render(){
         return(
 
-<form>
-    <input
+<form className = "form" onSubmit = {this.handleSubmit}>
+    <input className ="input"
     type ="text"
     name = "newTask"
-    value = {this.state.newTask}
+    value = {this.state.newItem}
     onChange = {this.handleChanges}
      />
      <button>Add todo</button>
-     <button>clear Completed</button>
+     {/* <button>clear Completed</button> */}
 </form>
         )
     }

@@ -1,22 +1,23 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm'
+import "./components/TodoComponents/Todo.css"
 
 const myTasks = [
   {
   task: 'Go for shopping',
   id: 1,
-  complete: false 
+  completed: true 
 },
 {
   task: 'Get the groceries',
   id: 2,
-  complete: false  
+  completed: false  
 },
 {
   task: 'Make the dinner',
   id: 3,
-  complete: false  
+  completed: false  
 },
 {
   task: 'Prepare for next-day class',
@@ -39,13 +40,13 @@ class App extends React.Component {
 
   //toggletask function to crossout the completed tasks
   toggleTask = clickedId => {
-    //for every tak create a new one (...spread operator or array method)
+    //for every task create a new one (...spread operator or array method)
     const newTodoList = this.state.todoList.map(todo =>{
       if (todo.id ===clickedId){
         //toggle completed
         return{
           ...todo,
-          completed: true // use !todo.completed if you want to crossout completed task.
+          completed:!todo.completed  // use  if you want to crossout completed task.
         };
       } else {
         return todo;
@@ -59,24 +60,34 @@ class App extends React.Component {
   }
 
 
-  addNewTask = todoText =>{
-    const newTask = {
-      task : todoText,    
+  addNewItem = newText =>{
+    console.log(newText)
+    const newItem = {
+      task: newText,    
       id: Date.now(),
       completed: false
     }
     this.setState({
-      todoList: [...this.state.todoList, newTask]
+      todoList: [...this.state.todoList, newItem]
     });
+  }
+  
+  clearCompleted = () => {
+    this.setState({
+      todoList: this.state.todoList.filter(item =>
+        !item.completed
+      )
+    })
   }
   
   render() {
     return (
-      <div>
+      <div className ="app">
         <h2>Welcome to my Todo App!</h2>
         <TodoList myTasks ={this.state.todoList}
-        toggleTask = {this.toggleTask}/>
-        <TodoForm addNewTask= {this.addNewTask}/>
+        toggleTask = {this.toggleTask}
+        clearCompleted = {this.clearCompleted}/>
+        <TodoForm addNewItem= {this.addNewItem}/>
       </div>
     );
   }
