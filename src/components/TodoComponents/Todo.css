@@ -1,0 +1,53 @@
+.app{
+    border: 2px rgb(1, 51, 1) solid;
+    border-radius: 10px;
+    background:#ffffe6 ;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.completed{
+text-decoration: line-through;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: #1a1a00;
+    text-align: center;
+}
+.form{
+text-align: center;
+padding: 0.5%;
+margin-left:15%;
+}
+
+.input{
+    border-radius: 6px;
+}
+button{
+    background:rgb(1, 51, 1) ;
+    color: #ffffe6;
+    padding: 0.5%;
+    margin: 2%;
+    border-radius: 10px;;
+}
+button:hover{
+    background-color:#ffffe6;
+    color: rgb(1, 51, 1);
+    border: 2px black solid;
+    
+}
+#btn{
+    margin-left:40%;
+}
+
+p{
+    background: rgb(3, 71, 3);
+    padding:2%;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    width:50%;
+    margin:1% auto;
+
+}
