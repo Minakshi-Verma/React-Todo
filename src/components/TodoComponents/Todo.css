@@ -1,9 +1,10 @@
 .app{
     border: 2px rgb(1, 51, 1) solid;
     border-radius: 10px;
-    background:#ffffe6 ;
+    background:#d1e0e0 ;
     width: 50%;
     margin: 0 auto;
+    background-image: linear-gradient(#ffffff, #5d8989)
 }
 
 .completed{
@@ -11,9 +12,10 @@ text-decoration: line-through;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #1a1a00;
     text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -2px #75a3a3
 }
 .form{
 text-align: center;
@@ -25,15 +27,15 @@ margin-left:15%;
     border-radius: 6px;
 }
 button{
-    background:rgb(1, 51, 1) ;
+    background:#334d4d ;
     color: #ffffe6;
     padding: 0.5%;
     margin: 2%;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 button:hover{
     background-color:#ffffe6;
-    color: rgb(1, 51, 1);
+    color: #334d4d;
     border: 2px black solid;
     
 }
@@ -42,12 +44,14 @@ button:hover{
 }
 
 p{
-    background: rgb(3, 71, 3);
+    background: #75a3a3;
     padding:2%;
     color: white;
     text-align: center;
     font-size: 1.1rem;
     width:50%;
-    margin:1% auto;
+    margin:2% auto;
+    box-shadow: 14px 8px 4px black;
+    border-radius: 10px;
 
 }
